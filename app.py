@@ -50,31 +50,29 @@ if selected == "Model":
        d = na.reshape(1, -1)
 
        prediction = m.predict(d)
-       print(prediction)
+       return prediction
 
 
     def main():
        
-     Relative_Compactness = st.text_input('Relative_Compactness')
-
-     Surface_Area = st.text_input('Relative_Compactness') 
-     Wall_Area = st.text_input('Wall_Area')
-     Roof_Area = st.text_input('Roof_Area')
-     Overall_Height = st.text_input('Overall_Height')
+     Relative_Compactness = st.text_input('Relative Compactness', key='1')
+     Surface_Area = st.text_input('Surface Area') 
+     Wall_Area = st.text_input('Wall Area')
+     Roof_Area = st.text_input('Roof Area')
+     Overall_Height = st.text_input('Overall Height')
      Orientation = st.text_input('Orientation')
-     Glazing_Area = st.text_input('Glazing_Area')
-     Glazing_Area_Distribution= st.text_input('Glazing_Area_Distribution')
+     Glazing_Area = st.text_input('Glazing Area')
+     Glazing_Area_Distribution= st.text_input('Glazing Area Distribution')
 
      cc = ''
 
      if st.button('Get Results'):
-       cc = ef([Relative_Compactness, Surface_Area, Wall_Area, Roof_Area, Overall_Height, Orientation, Glazing_Area, Glazing_Area_Distribution, Heating_Load, Cooling_Load])
-
-       st.success(cc)
+       cc = ef([Relative_Compactness, Surface_Area, Wall_Area, Roof_Area, Overall_Height, Orientation, Glazing_Area, Glazing_Area_Distribution])
+     st.success(cc)
 
     if __name__ == '__main__':
       main()
 
 if selected == "About":
     #st.title('About')
-    st.title('Hi, Group 4 here :smiley:')
+    st.title('Hi, Group 4 here :smiley:')   
